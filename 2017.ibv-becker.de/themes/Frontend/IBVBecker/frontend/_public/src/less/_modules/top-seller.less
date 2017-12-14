@@ -1,0 +1,115 @@
+/*
+Topseller
+=========================
+
+The topseller element is a modified product slider that is used to display a selection of best selling articles inside a slim slider element.
+
+*/
+.topseller {
+    .clearfix();
+    .unitize-margin(0, 0 , 20, 0);
+
+    .topseller--content {
+        .unitize-padding(0, 10);
+    }
+
+    .product-slider--arrow {
+        &.arrow--next {
+            .unitize(-1, 16, right);
+        }
+
+        &.arrow--prev {
+            .unitize(-1, 16, left);
+        }
+    }
+}
+
+.topseller--product {
+    text-align: center;
+
+    &:hover {
+        .badge {
+            .primary-gradient();
+            color: #fff;
+            text-shadow: 0 1px 1px #AD1200;
+        }
+        .product--title {
+            color: @brand-primary;
+        }
+    }
+}
+
+.topseller--number {
+    .unitize-margin(10, 0, 5, 0);
+}
+
+
+@media screen and (min-width: @tabletViewportWidth) {
+	.topseller.panel.has--border.is--rounded {
+		border: 0;
+		border-radius: 0;
+	}
+	
+	.is--ctl-listing .topseller--title.panel--title.is--underline {
+		margin: 0;
+		border-bottom: 1px solid #d7d7d7;
+		text-transform: none;
+		font-weight: 600;
+		font-size: 1.3rem;
+		text-transform: uppercase;
+		height: 3.9rem;
+		margin-bottom: 1rem;
+	}
+	
+    .product--box .product--price .price--default {
+		font-weight: 500;
+		font-size: 1.25rem !important;
+	}
+	
+	.topseller .product--box .product--badges {
+		left: 0.26rem;
+		position: absolute;
+		z-index: 750;
+	}
+	
+	.topseller .product--box .product--badges .badge--discount {
+		color: #fff;
+		background: @lbr-theme-design-secondary;
+		padding: .3rem 0.7rem;
+		font-size: 0.9rem
+	}
+	
+	.emotion--product-slider .product--box .product--badges {
+		top: 1.25rem;
+		left: 0.25rem;
+		position: absolute;
+		z-index: 750;
+	}
+	
+	.emotion--product-slider .product--box .product--badges .badge--discount {
+		top: 1.25rem;
+		color: #fff;
+		background: @lbr-theme-design-secondary;
+		padding: .3rem 0.5rem;
+		font-size: 0.75rem;
+	}
+
+}
+
+
+@media screen and (min-width: @desktopViewportWidth) {	
+	.topseller .product--box .product--badges {
+		left: 0.45rem;
+		position: absolute;
+		z-index: 750;
+	}
+	
+		.emotion--product-slider .product--box .product--badges {
+		top: 1.25rem;
+		left: 0.45rem;
+		position: absolute;
+		z-index: 750;
+	}
+
+
+}

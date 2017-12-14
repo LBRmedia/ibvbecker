@@ -1,0 +1,202 @@
+.header-main .logo-main .logo--shop {
+	height: 3.3875rem;
+	width: 83%;
+	padding-left: 3px;
+}
+
+.header-main .logo-main .logo--link {
+	height: 3.3875rem;
+	display: inline-block;
+	max-width: 100%;
+}
+
+    // Tablet Landscape styling for the global shop header
+@media screen and (min-width: @tabletLandscapeViewportWidth) {
+
+    .header-main {
+	    
+	    background: #ffffff;
+	    
+        .logo-main { margin-top: -0.7rem; margin-bottom: 0; padding: 0; width: 35%; }
+        .shop--navigation { width: 65%; }
+        .header--navigation { .unitize-padding(4, 0, 35, 0); }
+    }
+    
+    .header-main .top-bar {
+		padding: .1rem 0rem .25rem 0rem;
+	}
+    
+	.header-main .logo-main .logo--link {
+		height: 5rem;
+	}
+	
+	.navigation--list .navigation--entry .btn {
+		width: auto;
+		border: 0;
+		border-right: 0px;
+		border-radius: 0;
+	}
+	
+	.navigation--list .navigation--entry .btn {
+		width: auto;
+		border: 0;
+		border-right: 0;
+		border-radius: 0;
+		padding: .125rem 0.8rem .125rem 0.4rem;
+		background: none;
+	}
+	
+	.navigation--list .entry--account .account--link {
+		padding-left: 1rem;
+		padding-right: 0.3rem;
+		background: none;
+	}
+	
+	.navigation--list .btn.is--icon-left.cart--link {
+		padding: .125rem 0rem .125rem 1rem;
+		border-right: 0;
+	}
+	
+	.navigation--list .fa.fa-list, .fa.fa-user-o, .fa.fa-shopping-basket {
+		font-size: 1.4rem;
+		line-height: 2.2rem;
+		color: @lbr-theme-design-primary;
+		
+		&:hover { color: @lbr-theme-design-secondary; }
+	}
+	
+	.navigation--list .fa.fa-shopping-cart {
+		font-size: 1.7rem;
+		line-height: 2.2rem;
+		color: @lbr-theme-design-primary;
+		
+		&:hover { color: @lbr-theme-design-secondary; }
+	}
+	
+	
+	.navigation--list .entry--cart .cart--link .cart--amount {
+		display: inline-block;
+		color:#fff;
+		background-color: @lbr-theme-design-secondary;
+		background-repeat: repeat-x;
+		font-weight: 700;
+		line-height: 100%;
+		padding: .45rem .55rem .45rem .7rem;
+		border-radius: 13px;
+		vertical-align: top;
+		font-size: 0.77rem;
+		font-weight: 500;
+		margin-left: 2.5rem;
+	}
+	
+	.top-bar--navigation .entry--service {
+		position: relative;
+		text-transform: none;
+		font-size: 0.75rem;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+	
+	.icon--service {
+		color: @lbr-theme-design-secondary;
+		margin-right: 5px;
+		display: none;
+	}
+	
+	
+	.shop--navigation .navigation--entry .icon--search {
+		font-size: 1.075rem;
+		vertical-align: inherit;
+	}
+	
+	.entry--search .main-search--form .main-search--field {
+		background: #fff;
+		box-shadow: inset 0 4px 5px #dddddd;
+		border-radius: 3px;
+		border: 1px solid #e6e6e6;
+        border-top-color: #e6e6e6;
+		padding: .5625rem 2.375rem .5625rem .9625rem;
+	}
+	
+	
+	.entry--search .main-search--form .main-search--button {
+		color: #2a2a2a;
+		background-color: transparent;
+		background-repeat: repeat-x;
+		padding: 0rem 0.825rem 0rem 1.225rem;
+		border-radius: 0 5px 5px 0px;
+	}
+	
+	/*.entry--search .main-search--form .main-search--button {
+		padding: 0rem 1.225rem 0rem 1.225rem;
+		background: @lbr-theme-design-secondary;
+		border-radius: 0 10px 10px 0px;
+		border: 1px solid @lbr-theme-design-secondary;
+		border-left: 0px;
+		color: #ffffff;
+	}*/
+	
+    .shop--navigation {
+        .entry--search {
+            width: 45%;
+            margin-right: 8%;
+        }
+    }
+}
+
+@media screen and (max-width: @phoneLandscapeViewportWidth) {
+	.shop--navigation .navigation--entry .btn {
+		font-size: 1.2rem;
+		border: 0px;
+		background: none;
+	}
+	
+	.shop--navigation .navigation--entry .icon--search {
+		font-size: 1.4rem;
+		vertical-align: middle;
+	}
+	
+	.shop--navigation .navigation--entry .fa.fa-user-o {
+		font-size: 1.5rem;
+		vertical-align: middle;
+	}
+	
+	.shop--navigation .navigation--entry .fa.fa-list {
+		font-size: 1.5rem;
+		vertical-align: middle;
+	}
+	
+	
+	.shop--navigation .navigation--entry .btn.is--icon-left.cart--link {
+		font-size: 1.6rem;
+	}
+	
+	.header-main {
+		border-bottom: 0;
+	}
+	
+	.content--breadcrumb.block {
+		display: none;
+	}
+	
+	.header-main .logo-main {
+		padding: .725rem .625rem .325rem .625rem;
+	}
+}
+
+
+@media screen and (min-width: @tabletViewportWidth) {
+	.header-main .logo-main .logo--shop {
+		margin-left: 0.6rem;
+		width: 88%;
+	}
+}
+
+@media screen and (min-width: @desktopViewportWidth) {
+	.header-main .logo-main .logo--shop {
+		margin-left: 0rem;
+		width: 84%;
+		padding-left: 0px;
+		margin-top: -0.2rem;
+	}
+}

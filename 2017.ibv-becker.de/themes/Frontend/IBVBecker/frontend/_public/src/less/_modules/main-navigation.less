@@ -1,0 +1,118 @@
+/*
+Main navigation
+==========================================
+Contains the styles of the main navigation of the Shopware storefront.
+
+The main navigation is positioned above the content section.
+
+It contains the viewport specific styles inside media queries.
+*/
+
+.navigation-main {
+	background: @lbr-theme-design-gray;
+    display: none;
+}
+
+@media screen and (min-width: @tabletViewportWidth) {
+	.navigation-main {
+        border-bottom: 0px;
+		display: block;
+		position: relative;
+
+		.navigation--list {
+			.clearfix();
+            .unitize-padding(0, 10);
+            margin: 0;
+            position: relative;
+            white-space: nowrap;
+		}
+		
+		.container {
+            background: none;
+		}
+
+		.navigation--entry {
+            display: inline-block;
+            -ms-touch-action: none;
+		}
+
+		.navigation--link {
+            .transition(none 0);
+			.unitize-padding(20, 9);
+            .unitize(font-size, 13.5);
+			.border-radius-multi(3px, 3px, 0, 0);
+			margin: 0;
+			display: block;
+			cursor: pointer;
+			color: @text-color;
+			text-transform: uppercase;
+			font-weight: 400;
+
+			&:hover { color: @brand-primary; }
+		}
+
+		.is--active .navigation--link {
+			background: none;
+			color: #242424;
+			font-weight: 700;
+			background: #f0f0f0;
+
+            &:hover { color: #fff; }
+		}
+		
+		.navigation--link.is--first {
+			padding: 0.75rem 1.875rem 0.7rem 0rem;
+		}
+			
+		.navigation--link.is--first.active {
+			background: none;
+			color: #242424;
+			
+			border-bottom: 1px solid rgba(237,236,232, 0.5);
+		}
+		
+		li.navigation--entry:last-of-type a span {
+			margin-left: 3.5rem;
+			font-weight: 600;
+			font-style: italic;
+			background-image: url(../../img/gfx/kontakt_ibv.png);
+			background-repeat: no-repeat;
+			padding: 2px 0 0 40px;
+		}
+		
+		.navigation--list .navigation--entry.is--hovered .navigation--link {
+			background: @lbr-theme-design-primary;
+			color: #fff;
+			border-radius: 0;
+			/*border-bottom: 1px solid @lbr-theme-design-primary;*/
+		}
+	}
+}
+
+@media screen and (min-width: @desktopViewportWidth) {
+	.navigation-main {
+        .navigation--list {
+            padding: 0;
+        }
+        
+        .navigation--link {
+            .transition(none 0);
+			.unitize-padding(14, 17);
+            font-size: 0.9rem;
+			.border-radius-multi(3px, 3px, 0, 0);
+			margin: 0;
+			display: block;
+			cursor: pointer;
+			color: @text-color;
+			text-transform: uppercase;
+			font-weight: 600;
+
+			&:hover { color: @brand-primary; }
+		}
+		
+		.navigation--link.is--first {
+			padding: 0.75rem 7.575rem 0.7rem 0rem;
+		}
+
+	}
+}

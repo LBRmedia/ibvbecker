@@ -1,0 +1,392 @@
+/*
+Mixins
+==================================================
+The `mixins.less` file contains the imports to all mixin documents that simplify the work with Shopware.
+
+Mixin specific documentation can be found inside each mixin file.
+
+Mixins can be used by adding the mixin class onto an element inside Shopware.
+
+**Example:**<br/>
+`.border-radius(3px);`
+*/
+/*
+Appearance mixin
+============================================
+The mixins provides you a cross-browser compatible method to set the appearance of the element.
+
+Please refer to <http://caniuse.com/appearance> to see the browser support table of the feature.
+
+######Example:
+`.appearance([value]);`
+
+`@param {String} type The type you want to use`
+*/
+/*
+Backface visibility mixin
+============================================
+The mixins provides you a cross-browser compatible method to set the backface-visibility of the element.
+
+Please refer to <http://caniuse.com/transforms3d> to see the browser support table of the feature.
+
+######Example:
+`.backface-visibility([value]);`
+
+`@param {String} visibility The visibility you want to use`
+*/
+/*
+Border-radius mixin
+=============================================
+The mixins provides you a cross-browser compatible method to set a border-radius.
+
+Please refer to <http://caniuse.com/border-radius> to see the browser support table of the feature.
+
+######Syntax:
+`@param {String} radius The radius you want to set`<br/>
+
+######Example:
+Same border-radius for all edges: <br/>
+`.border-radius([pixel-value]);`<br/>
+
+Different border-radius:<br/>
+`.border-radius-multi([pixel-value-leftTop], [pixel-value-rightTop], [pixel-value-rightBottom], [pixel-value-leftBottom]);`<br/>
+
+Resetting border radius:<br/>
+`.reset-border-radius();`
+*/
+/*
+Box shadow mixin
+==============================================
+The mixins provides you a cross-browser compatible method to set a box-shadow.
+
+Please refer to <http://caniuse.com/css-boxshadow> to see the browser support table of the feature.
+
+######Example:
+`.box-shadow([h-shadow-value], [v-shadow-value], [blur-amount], [spread-amount], [shadow-color]);`
+
+`@param: {Number} x: Offset to the x axis (Default: 0)`<br/>
+`@param: {Number} y: Offset to the y axis (Default: 0)`<br/>
+`@param: {Number} blur: Bluring radius (Default: 1px)`<br/>
+`@param: {String} color: Color of the shadow (Default: #000)`<br/>
+*/
+/*
+Box-sizing mixin
+========================================
+The mixins provides you a cross-browser compatible method to set the box-sizing which supports IE starting from
+version 8 to the newest one.
+
+Please refer to <http://caniuse.com/css3-boxsizing> to see the browser support table of the feature.
+
+######Example:
+`.box-sizing:([value]);`
+
+`@param: {String} box-sizing: Box model, which should be used (Default: border-box)`
+*/
+/*
+Clearfix mixin
+================================
+The clearfix mixin allows the easy integration of the floating-solution method.
+
+The clearfix resolves the problem that occurs when two floating elements are nested inside a parent element, then sometimes the parent elements height disappears.
+
+Add the `.clearfix` class to the parent element.
+
+######Example:
+`.clearfix();`
+
+*/
+/*
+Gradient mixin
+====================================================
+The mixins provides you a cross-browser compatible method to set a linear gradient which goes from top to bottom.
+
+Please refer to <http://caniuse.com/css-gradients> to see the browser support table of the feature.
+
+Shopware 5 also provides gradient mixins based on the basic color variables that can be changed in the backend theme configuration tool.
+######Basic gradients:
+`.primary-gradient();`<br/>
+`.secondary-gradient();`<br/>
+`.white-gradient();`<br/>
+
+######Linear Gradient Example:
+`.linear-gradient([startcolor-value], [endcolor-value]);`
+
+`@param {String} start The start color of the gradient`<br/>
+`@param {String} end The end color of the gradient`
+*/
+/*
+Opacity
+===============================================
+The mixins provides you a cross-browser compatible opacity which supports IE starting from version 8 to the
+newest one. Safari, Chrome and Firefox are supported in all versions.
+
+Please refer to <http://caniuse.com/css-opacity> to see the browser support table of the feature.
+
+######Example:
+`.opacity([value]);`
+
+`@param: {Number} opacity: Value of the opacity, starting from 0 to 1`
+*/
+/*
+Rotate mixin
+===============================================
+The mixins provides you a cross-browser compatible method to set a transformation which rotates the element. Keep in
+mind that you can not mix different transformations.
+
+Please refer to <http://caniuse.com/transforms2d> to see the browser support table of the feature.
+
+######Example:
+`.rotate([value]);`
+
+`@param {String} degree The degree value you want to set. Please keep in mind that you need to suffix the unit.`
+*/
+/*
+Scale mixin
+===============================
+The mixins provides you a cross-browser compatible method to set a transformation which scales the element.
+Keep in mind that you can not mix different transformations.
+
+Please refer to <http://caniuse.com/transforms2d> to see the browser support table of the feature.
+
+######Example:
+`.scale([value]);`
+
+`@param {String} scale-value The scale value, you want to set`
+*/
+/*
+Touch callout mixin
+===========================================
+Disables the default callout shown when you touch and hold a touch target.
+
+######Support:
+- iOS 2.0<br/>
+- Android 4.1<br/>
+
+######Example:
+`.touch-callout([value]);`
+
+`@param: {String} type: The type you want to set (Default: none)`
+*/
+/*
+Transform style mixin
+======================================
+The mixins provides you a cross-browser compatible method to set a transformation style.
+
+Please refer to <http://caniuse.com/transforms3d> to see the browser support table of the feature.
+
+######Example:
+`.transform-style([value]);`
+
+`@param {String} Style The style you want for your transformation (Default: preserve-3d)`
+*/
+/*
+Transform origin mixin
+======================================
+The mixins provides you a cross-browser compatible method to set the transform origin position.
+
+Please refer to <http://caniuse.com/transforms2d> to see the browser support table of the feature.
+
+######Example:
+`.transform-origin([x-value],[y-value],[z-value]);`
+
+`@param: x: Sets the origin position on the x axis (Default: 50%)`<br/>
+`@param: y: Sets the origin position on the y axis (Default: 50%)`<br/>
+`@param: z: Sets the origin position on the z axis (Default: 0)`
+*/
+/*
+Transition mixin
+=========================================
+The mixins provides you a cross-browser compatible method to set a transition.
+
+Please refer to <http://caniuse.com/css-transitions> to see the browser support table of the feature.
+
+######Example:
+`.transition([property], [duration-value], [easing]);`
+
+`@param: {String} properties: The properites which should be animated (Default: all)`<br/>
+`@param: {String} duration: Duration of the transition including the unit (Default: 0.3s)`<br/>
+`@param: {String} easing: The easing which should be used for the transition (Default: ease-out)`
+*/
+/*
+Translate mixin
+============================================
+The mixins provides you a cross-browser compatible method to set a transition.
+
+Please refer to <http://caniuse.com/css-transitions> to see the browser support table of the feature.
+
+Keep in mind, that 3d translations are needing an perspective, otherwise the translated elements get skewed up.
+
+######Example:
+`.translate([x-value],[y-value],[z-value]);`
+
+`@param: {String} rotateX: The rotation on the x-axis`<br/>
+`@param: {String} rotateY: The rotation on the y-axis`<br/>
+`@param: {String} rotateZ: The rotation on the z-axis`<br/>
+*/
+/*
+Unitize mixin
+================================================
+The unitize mixins converts values from px-units to the relative rem-units, providing all the benefits of units like em and rem, without you having to do any calculations yourself.
+
+######Syntax:
+`@property` = the property that should be unitized.<br/>
+`@value` = pixel-value<br/>
+`@baseValue` (optional) = default browser font-size (@remScaleFactor in most cases)<br/>
+
+######Example Unitize mixin with custom property
+`.unitize(@property, @value);`<br/>
+`.unitize(font-size, 16);`
+
+######Specific built-in functions
+In addition to the general `.unitize()` mixin, Shopware contains specific mixins to quickly calculate values which (for example) have more than one property.<br/>
+<br/>
+
+`.unitize-height(@value)`<br/>
+`.unitize-width(@value)`<br/>
+`.unitize-max-height(@value)`<br/>
+`.unitize-max-width(@value)`<br/>
+`.unitize-min-width(@value)`<br/>
+`.unitize-padding(@topValue, @rightValue: @topValue, @bottomValue: @topValue, @leftValue: @rightValue)`<br/>
+`.unitize-margin(@topValue, @rightValue: @topValue, @bottomValue: @topValue, @leftValue: @rightValue)`<br/>
+`.unitize-variable(@value)`<br/>
+*/
+/*
+User-select mixin
+===============================
+The mixins provides you a cross-browser compatible method to set a user selection mode.
+
+Please refer to <http://caniuse.com/user-select-none> to see the browser support table of the feature.
+
+######Example:
+`.user-select([value]);`
+
+`@param: {String} type: The type you want to set (Default: none)`
+*/
+/*
+Transform mixin
+==============================================
+The mixins provides you a cross-browser compatible method to set a transformation.
+
+Please refer to <http://caniuse.com/transforms2d> to see the browser support table of the feature.
+
+######Example:
+`.transform([value]);`
+
+`@param: {String} properties: The transformation(s) that should be applied`
+*/
+/*
+Tab highlighting mixin
+===========================
+Sets the color of the highlighting when a link was clicked / tapped.
+
+Please refer to <http://www.browsersupport.net/CSS/-webkit-tap-highlight-color> to see the browser support table of the feature.
+
+######Example:
+`.tap-highlight-color([color-value]);`
+
+`@param: {String} color: The color you want to set (Default: rgba(0, 0, 0, 0))`
+*/
+/*
+Keyframe mixin
+=============================================
+The mixins provides you a cross-browser compatible method to set a keyframe.
+
+Please refer to <http://caniuse.com/#search=keyframe> to see the browser support table of the feature.
+
+######Example:
+`.keyframes([name-value], [frames-value]);`
+
+`@param: {String} name: The keyframe animation name`<br/>
+`@param: {String} roules: the animation frames`
+*/
+@-webkit-keyframes keyframe--spin {
+  from {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes keyframe--spin {
+  from {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes keyframe--spin-reverse {
+  from {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+}
+@keyframes keyframe--spin-reverse {
+  from {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+}
+/*
+Animations mixin
+============================================
+The mixins provides you a cross-browser compatible method to set animation values.
+
+Please refer to <http://caniuse.com/css-animation> to see the browser support table of the feature.
+
+######Example:
+`.animation([value]);`
+
+`@param: {String} value: All animation values`
+*/
+/*
+Column count mixin
+=============================================
+This mixin provides you a cross-browser compatible method to set the column count property.
+
+Please refer to <http://caniuse.com/multicolumn> to see the browser support table of the feature.
+
+######Example:
+`.column-count([value]);`
+
+`@param: {Number} count: The amount of columns you want to set (Default: auto)`
+*/
+/*
+Hypheration mixin
+======================================
+The mixins provides you a cross-browser compatible method to set the hyphenation.
+
+Please refer to <http://caniuse.com/css-hyphens> to see the browser support table of the feature.
+
+######Example:
+`.hyphens([value]);`
+
+`@param: {String} hyphenation: The hyphenation that should be used (Default: auto)`
+*/
+/*
+Grabbing cursor
+==================================
+This mixin provides you a cross-browser compatible method to set the cursor grabbing behavior.
+
+######Example:
+`.cursorGrab();`<br/>
+`.cursorGrabbing();`<br/>
+
+*/
+/*
+Clear form button mixin
+========================
+This mixin removes styles from the button element and makes it look like a text link.
+*/

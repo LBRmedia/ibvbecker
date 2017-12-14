@@ -1,0 +1,86 @@
+
+h1,h2 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.95rem;
+}
+
+h3 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+
+.emotion--html ul {
+    margin: 0 0 0 1rem;;
+    padding: 0;
+}
+
+.is--ctl-campaign .content-main {
+	margin-top: 0rem;
+}
+
+.is--ctl-campaign .content--home {
+	margin-top: 0.5rem;
+}
+
+hr {
+	border-top: 1px solid #d7d7d7;
+	border-bottom: 0px;
+	border-left: 0px;
+	border-right: 0px;
+}
+
+.arrwow_button {
+	font-weight: 900;
+	padding: 0 2px 0 10px;
+}
+
+b, strong {
+	font-weight: 600;
+}
+
+@media screen and(min-width: @tabletViewportWidth) {
+    .content-main {
+        .box-shadow(0 0 0 0 @border-color);
+        .unitize(min-height, 750);
+    }
+
+    .content-main--inner {
+        .unitize-padding(0, 10, 16);
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: @desktopViewportWidth) {
+    .content-main {
+        .unitize(margin-top, 20);
+        .unitize(margin-bottom, 45);
+        .unitize(min-height, 700);
+    }
+    
+    .content-main--inner {
+        .unitize-padding(0, 0, 50, 0);
+    }
+}
+
+@media screen and (max-width: @phoneLandscapeViewportWidth) {
+	h1 {
+		margin: 0.425rem 0rem 1.25rem 0rem;
+	}
+	
+	.is--ctl-listing .content-main--inner .emotion--wrapper {
+		padding: 0;
+		margin: -1.25rem -0.625rem 0 -0.625rem;
+	}
+	
+	.header-main {
+		padding-bottom: 0.825rem;
+		background: #fff;
+		border-bottom: 1px solid #d7d7d7;
+	}
+}
+
+
+
